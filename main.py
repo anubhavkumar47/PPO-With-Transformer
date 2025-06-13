@@ -69,7 +69,7 @@ def train():
 
         log_data.append([episode + 1, total_reward/max_time_steps, total_aoi/max_time_steps, total_energy/max_time_steps, total_actor_loss/max_time_steps, total_critic_loss/max_time_steps])
         print(f"Episode {episode + 1}: Reward={total_reward/max_time_steps:.2f}, AoI={total_aoi/max_time_steps:.2f}, Energy={total_energy/max_time_steps:.2f}, Actor Loss={total_actor_loss/max_time_steps:.4f}, Critic Loss={total_critic_loss/max_time_steps:.4f}")
-
+        print("----------------------------------------------------------------------------------------------------------------------------------------")
     with open("training_log.csv", mode="w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(["Episode", "Reward", "AoI", "Energy", "ActorLoss", "CriticLoss"])
